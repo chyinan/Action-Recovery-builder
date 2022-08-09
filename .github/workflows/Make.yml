@@ -67,7 +67,6 @@ jobs:
       
     - name: Initialize repo
       run: |
-        PATH=~/bin:$PATH
         mkdir workspace
         cd workspace
         echo "::set-output name=pwd::$(pwd)"
