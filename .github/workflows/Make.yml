@@ -63,10 +63,11 @@ jobs:
         mkdir ~/bin
         curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
         chmod a+x ~/bin/repo
-        export PATH=~/bin:$PATH
+        export    PATH=~/bin:$PATH
       
     - name: Initialize repo
       run: |
+        PATH=~/bin:$PATH
         mkdir workspace
         cd workspace
         echo "::set-output name=pwd::$(pwd)"
